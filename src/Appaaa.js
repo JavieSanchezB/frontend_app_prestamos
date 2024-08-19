@@ -23,9 +23,9 @@ function App() {
     const fetchData = async () => {
       try {
         const [clientesRes, prestamosRes, pagosRes] = await Promise.all([
-          axios.get('http://localhost:5000/clientes'),
-          axios.get('http://localhost:5000/prestamos'),
-          axios.get('http://localhost:5000/pagos'),
+          axios.get('http://localhost:5001/clientes'),
+          axios.get('http://localhost:5001/prestamos'),
+          axios.get('http://localhost:5001/pagos'),
         ]);
         setClientes(clientesRes.data);
         setPrestamos(prestamosRes.data);
